@@ -1,10 +1,26 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+  html {
+    font-size: 93.75%;
+  }
+
   header {
     background-color: #2d4a22;
     padding: 2rem 0 10rem;
     text-align: center;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: --1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
   }
 
   h2 {
@@ -46,6 +62,10 @@ export const Wrapper = styled.div`
   }
 
   .card h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     font-weight: normal;
     font-size: 1rem;
   }
@@ -62,10 +82,34 @@ export const Wrapper = styled.div`
     color: #fff;
   }
 
-  /* TABLE */
+  /* TRANSACTIONS */
+
+  button {
+    color: #49aa26;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    color: #3dd705;
+  }
+
+  button.new {
+    display: inline-block;
+    margin-bottom: 0.8rem;
+  }
+
+  /* TRANSACTION TABLE */
+  #transaction {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+  }
+
   #data-table {
     width: 100%;
     border-spacing: 0 0.5rem;
+    color: #969cb3;
   }
 
   #data-table thead th {
@@ -85,9 +129,15 @@ export const Wrapper = styled.div`
   #data-table tbody tr:hover {
     opacity: 1;
   }
+
   #data-table thead th:first-child,
   #data-table tbody td:first-child {
     border-radius: 0.25rem 0 0 0.25rem;
+  }
+
+  #data-table thead th:last-child,
+  #data-table tbody td:last-child {
+    border-radius: 0 0.25rem 0.25rem 0;
   }
 
   table tbody td {
@@ -102,7 +152,7 @@ export const Wrapper = styled.div`
     color: #49aa26;
   }
 
-  #data-table td.outcome {
+  #data-table td.expense {
     color: #e92929;
   }
 
@@ -111,5 +161,18 @@ export const Wrapper = styled.div`
     padding: 4rem 0 2rem;
     color: #363f5f;
     opacity: 0.6;
+  }
+
+  /* RESPONSIVE */
+  @media (min-width: 800px) {
+    html {
+      font-size: 87.5%;
+    }
+
+    #balance {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; /* or repeat(3, 1fr) */
+      gap: 2rem;
+    }
   }
 `;
