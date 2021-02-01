@@ -91,6 +91,60 @@ const Home = () => {
         </section>
       </main>
 
+      <div className="modal-overlay active">
+        <div className="modal">
+          <div id="form">
+            <h2>New Transactions</h2>
+            <form action="">
+              <div className="input-group">
+                <label className="sr-only" htmlFor="description">
+                  <input type="text" />
+                </label>
+                <input
+                  type="text"
+                  id="description"
+                  name="description"
+                  placeholder="Description"
+                />
+              </div>
+
+              <div className="input-group">
+                <label className="sr-only" htmlFor="amount">
+                  <input type="text" />
+                </label>
+                <input
+                  type="number"
+                  id="amount"
+                  name="amount"
+                  placeholder="U$  0,00"
+                  step="0.01"
+                />
+                <small className="help">
+                  Use o sinal - (negativo) para desepesas e , (vírgula) para
+                  casas decimais.
+                </small>
+              </div>
+
+              <div className="input-group">
+                <label className="sr-only" htmlFor="date">
+                  <input type="text" />
+                </label>
+                <input type="date" id="date" name="date" />
+              </div>
+
+              <div className="input-group actions">
+                <button className="button cancel" type="button">
+                  Cancel
+                </button>
+                <button className="button save" type="submit">
+                  Save
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
       <footer>
         <p>dev.finance$</p>
       </footer>

@@ -50,7 +50,7 @@ export const Wrapper = styled.div`
     margin-top: 0;
   }
 
-  /* CARDS */
+  /* CARDS ====================== */
 
   .card {
     background-color: white;
@@ -82,11 +82,19 @@ export const Wrapper = styled.div`
     color: #fff;
   }
 
-  /* TRANSACTIONS */
+  /* TRANSACTIONS ====================== */
 
   button {
+    width: 100%;
+    height: 50px;
+
+    border: none;
+    border-radius: 0.25rem;
+
     color: #49aa26;
     text-decoration: none;
+    /* font-size: 16px; */
+
     cursor: pointer;
   }
 
@@ -94,12 +102,37 @@ export const Wrapper = styled.div`
     color: #3dd705;
   }
 
+  button.save {
+    color: white;
+    background-color: #49aa26;
+  }
+
+  button.save:hover {
+    background-color: #3dd705;
+  }
+
   button.new {
     display: inline-block;
     margin-bottom: 0.8rem;
   }
 
-  /* TRANSACTION TABLE */
+  button.cancel {
+    height: 50px;
+
+    color: #e92929;
+    border: 2px #e92929 solid;
+    border-radius: 0.25rem;
+
+    opacity: 0.6;
+    /* align-items: center;
+    justify-content: center; */
+  }
+
+  button.cancel:hover {
+    opacity: 1;
+  }
+
+  /* TRANSACTION TABLE ====================== */
   #transaction {
     width: 100%;
     display: block;
@@ -156,11 +189,75 @@ export const Wrapper = styled.div`
     color: #e92929;
   }
 
+  /* MODAL ====================== */
+
+  .modal-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal {
+    width: 90%;
+    max-width: 500px;
+    background-color: #f0f2f5;
+    padding: 2.4rem;
+  }
+
   footer {
     text-align: center;
     padding: 4rem 0 2rem;
     color: #363f5f;
     opacity: 0.6;
+  }
+
+  /* FORM ====================== */
+
+  #form {
+  }
+
+  #form h2 {
+    margin-top: 0;
+  }
+
+  input {
+    width: 100%;
+    border: none;
+    border-radius: 0.2rem;
+
+    padding: 0.8rem;
+  }
+
+  .input-group {
+    margin-top: 0.8rem;
+  }
+
+  .input-group small {
+    opacity: 0.4;
+  }
+
+  .input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .input-group.actions button {
+    width: 48%;
   }
 
   /* RESPONSIVE */
