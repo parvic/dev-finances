@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
     width: 1px;
     height: 1px;
     padding: 0;
-    margin: --1px;
+    margin: -1px;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
@@ -42,7 +42,7 @@ export const Wrapper = styled.div`
   }
 
   #balance {
-    margin-top: -8rem;
+    margin-top: -5rem;
   }
 
   #balance h2 {
@@ -85,11 +85,9 @@ export const Wrapper = styled.div`
   /* TRANSACTIONS ====================== */
 
   button {
-    width: 100%;
-    height: 50px;
-
     border: none;
     border-radius: 0.25rem;
+    outline: none;
 
     color: #49aa26;
     text-decoration: none;
@@ -102,21 +100,25 @@ export const Wrapper = styled.div`
     color: #3dd705;
   }
 
-  button.save {
-    color: white;
-    background-color: #49aa26;
-  }
-
-  button.save:hover {
-    background-color: #3dd705;
-  }
-
   button.new {
     display: inline-block;
     margin-bottom: 0.8rem;
   }
 
-  button.cancel {
+  .button.save {
+    width: 100%;
+    height: 50px;
+
+    color: white;
+    background-color: #49aa26;
+  }
+
+  .button.save:hover {
+    background-color: #3dd705;
+  }
+
+  .button.cancel {
+    width: 100%;
     height: 50px;
 
     color: #e92929;
@@ -197,6 +199,7 @@ export const Wrapper = styled.div`
     justify-content: center;
 
     position: fixed;
+    z-index: 1;
     top: 0;
     width: 100%;
     height: 100%;
@@ -212,6 +215,9 @@ export const Wrapper = styled.div`
   }
 
   .modal {
+    position: relative;
+    z-index: 2;
+
     width: 90%;
     max-width: 500px;
     background-color: #f0f2f5;

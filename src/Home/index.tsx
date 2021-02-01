@@ -8,6 +8,14 @@ import minus from '../assets/minus.svg';
 import total from '../assets/total.svg';
 
 const Home = () => {
+  const open = () => {
+    document.querySelector('.modal-overlay')?.classList.add('active');
+  };
+
+  const close = () => {
+    document.querySelector('.modal-overlay')?.classList.remove('active');
+  };
+
   return (
     <S.Wrapper>
       <header>
@@ -45,7 +53,7 @@ const Home = () => {
         <section id="transaction">
           <h2 className="sr-only">Transactions</h2>
 
-          <button className="button new" type="button">
+          <button className="button new" type="button" onClick={open}>
             + New Transaction
           </button>
 
@@ -91,7 +99,7 @@ const Home = () => {
         </section>
       </main>
 
-      <div className="modal-overlay active">
+      <div className="modal-overlay">
         <div className="modal">
           <div id="form">
             <h2>New Transactions</h2>
@@ -133,7 +141,7 @@ const Home = () => {
               </div>
 
               <div className="input-group actions">
-                <button className="button cancel" type="button">
+                <button className="button cancel" type="button" onClick={close}>
                   Cancel
                 </button>
                 <button className="button save" type="submit">
