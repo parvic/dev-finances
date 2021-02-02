@@ -20,4 +20,21 @@ export default createGlobalStyle`
     color: #363f5f;
     font-weight: normal;
   }
+
+  button {
+    border: none;
+    border-radius: 0.25rem;
+    outline: none;
+
+    color: #49aa26;
+    text-decoration: none;
+    /* font-size: 16px; */
+
+    cursor: pointer;
+  }
+
+  button:hover {
+    color: #3dd705;
+  }
+
 `;

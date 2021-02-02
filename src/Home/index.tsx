@@ -10,10 +10,6 @@ import Card from '../components/Card';
 import Table from '../components/Table';
 
 const Home = () => {
-  const open = () => {
-    document.querySelector('.modal-overlay')?.classList.add('active');
-  };
-
   const close = () => {
     document.querySelector('.modal-overlay')?.classList.remove('active');
   };
@@ -24,7 +20,7 @@ const Home = () => {
         <img src={logo} alt="Logo Dev Finance" />
       </header>
 
-      <main className="container">
+      <main>
         <section id="balance">
           <h2 className="sr-only">Balance Sheet</h2>
           <Card id="income" title="Income" icon={income} value={5000} />
@@ -34,61 +30,7 @@ const Home = () => {
           <Card id="total" title="Total" icon={total} value={3000} />
         </section>
 
-        <Table
-          description="Internet"
-          value={200}
-          date="01/02/2021"
-          category="Expense"
-          icon={minus}
-        />
-
-        {/* <section id="transaction">
-          <h2 className="sr-only">Transactions</h2>
-
-          <button className="button new" type="button" onClick={open}>
-            + New Transaction
-          </button> */}
-
-        {/* <table id="data-table">
-            <thead>
-              <tr>
-                <th>Description</th>
-                <th>Value</th>
-                <th>Date</th>
-                <th> </th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td className="description">Energy</td>
-                <td className="expense">U$ 500</td>
-                <td className="date">23/01/2021</td>
-                <td>
-                  <img src={minus} alt="minus" />
-                </td>
-              </tr>
-
-              <tr>
-                <td className="description">Internet</td>
-                <td className="income">U$ 200</td>
-                <td className="date">25/01/2021</td>
-                <td>
-                  <img src={minus} alt="minus" />
-                </td>
-              </tr>
-
-              <tr>
-                <td className="description">Groceries</td>
-                <td className="expense">U$ 800</td>
-                <td className="date">05/01/2021</td>
-                <td>
-                  <img src={minus} alt="minus" />
-                </td>
-              </tr>
-            </tbody>
-          </table> */}
-        {/* </section> */}
+        <Table />
       </main>
 
       <div className="modal-overlay">

@@ -1,24 +1,27 @@
 import React from 'react';
+import TableRow from '../TableRow';
 import * as S from './style';
 
-interface Table {
-  category: string;
-  description: string;
-  value: number;
-  date: string;
-  icon: string;
-}
+import income from '../../assets/income.svg';
+import expense from '../../assets/expense.svg';
+import minus from '../../assets/minus.svg';
+import plus from '../../assets/plus.svg';
+import total from '../../assets/total.svg';
 
-const Table = (table: Table) => {
+const Table = () => {
+  const open = () => {
+    document.querySelector('.modal-overlay')?.classList.add('active');
+  };
+
   return (
     <S.Transaction>
       <h2 className="sr-only">Transactions</h2>
 
-      <button className="button new" type="button">
+      <button className="button new" type="button" onClick={open}>
         + New Transaction
       </button>
 
-      <table id="data-table">
+      <S.DataTable>
         <thead>
           <tr>
             <th>Description</th>
@@ -29,34 +32,31 @@ const Table = (table: Table) => {
         </thead>
 
         <tbody>
-          <tr>
-            <td className="description">{table.description}</td>
-            <td className="expense">{table.value}</td>
-            <td className="date">{table.date}</td>
-            <td>
-              <img src={table.icon} alt={table.category} />
-            </td>
-          </tr>
+          <TableRow
+            description="Internet"
+            value={200}
+            date="01/02/2021"
+            category="Expense"
+            icon={minus}
+          />
 
-          <tr>
-            <td className="description">{table.description}</td>
-            <td className="expense">{table.value}</td>
-            <td className="date">{table.date}</td>
-            <td>
-              <img src={table.icon} alt={table.category} />
-            </td>
-          </tr>
+          <TableRow
+            description="Freelance"
+            value={200}
+            date="01/02/2021"
+            category="Expense"
+            icon={plus}
+          />
 
-          <tr>
-            <td className="description">{table.description}</td>
-            <td className="expense">{table.value}</td>
-            <td className="date">{table.date}</td>
-            <td>
-              <img src={table.icon} alt={table.category} />
-            </td>
-          </tr>
+          <TableRow
+            description="Internet"
+            value={200}
+            date="01/02/2021"
+            category="Expense"
+            icon={minus}
+          />
         </tbody>
-      </table>
+      </S.DataTable>
     </S.Transaction>
   );
 };
