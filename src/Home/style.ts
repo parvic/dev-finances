@@ -135,7 +135,7 @@ export const Wrapper = styled.div`
   }
 
   /* TRANSACTION TABLE ====================== */
-  #transaction {
+  /* #transaction {
     width: 100%;
     display: block;
     overflow-x: auto;
@@ -189,7 +189,7 @@ export const Wrapper = styled.div`
 
   #data-table td.expense {
     color: #e92929;
-  }
+  } */
 
   /* MODAL ====================== */
 
@@ -248,7 +248,7 @@ export const Wrapper = styled.div`
     padding: 0.8rem;
   }
 
-  .input-group {
+  /* .input-group {
     margin-top: 0.8rem;
   }
 
@@ -264,7 +264,7 @@ export const Wrapper = styled.div`
 
   .input-group.actions button {
     width: 48%;
-  }
+  } */
 
   /* RESPONSIVE */
   @media (min-width: 800px) {

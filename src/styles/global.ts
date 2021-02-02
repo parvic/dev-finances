@@ -12,4 +12,12 @@ export default createGlobalStyle`
     background-color: #f0f2f5;
     font-family: 'poppins', sans-serif;
   }
+
+  h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+
+    color: #363f5f;
+    font-weight: normal;
+  }
 `;

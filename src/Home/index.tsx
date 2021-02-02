@@ -7,6 +7,7 @@ import expense from '../assets/expense.svg';
 import minus from '../assets/minus.svg';
 import total from '../assets/total.svg';
 import Card from '../components/Card';
+import Table from '../components/Table';
 
 const Home = () => {
   const open = () => {
@@ -33,14 +34,22 @@ const Home = () => {
           <Card id="total" title="Total" icon={total} value={3000} />
         </section>
 
-        <section id="transaction">
+        <Table
+          description="Internet"
+          value={200}
+          date="01/02/2021"
+          category="Expense"
+          icon={minus}
+        />
+
+        {/* <section id="transaction">
           <h2 className="sr-only">Transactions</h2>
 
           <button className="button new" type="button" onClick={open}>
             + New Transaction
-          </button>
+          </button> */}
 
-          <table id="data-table">
+        {/* <table id="data-table">
             <thead>
               <tr>
                 <th>Description</th>
@@ -78,8 +87,8 @@ const Home = () => {
                 </td>
               </tr>
             </tbody>
-          </table>
-        </section>
+          </table> */}
+        {/* </section> */}
       </main>
 
       <div className="modal-overlay">
