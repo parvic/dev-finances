@@ -42,7 +42,7 @@ export const Wrapper = styled.div`
   }
 
   #balance {
-    margin-top: -5rem;
+    margin-top: -8rem;
   }
 
   #balance h2 {

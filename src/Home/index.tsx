@@ -6,6 +6,7 @@ import income from '../assets/income.svg';
 import expense from '../assets/expense.svg';
 import minus from '../assets/minus.svg';
 import total from '../assets/total.svg';
+import Card from '../components/Card';
 
 const Home = () => {
   const open = () => {
@@ -25,29 +26,11 @@ const Home = () => {
       <main className="container">
         <section id="balance">
           <h2 className="sr-only">Balance Sheet</h2>
-          <div className="card">
-            <h3>
-              <span> Income</span>
-              <img src={income} alt="Income" />
-            </h3>
-            <p>$ 5000.00</p>
-          </div>
+          <Card id="income" title="Income" icon={income} value={5000} />
 
-          <div className="card">
-            <h3>
-              <span>Expense</span>
-              <img src={expense} alt="Expense" />
-            </h3>
-            <p>$ 2000.00</p>
-          </div>
+          <Card id="expense" title="Expense" icon={expense} value={2000} />
 
-          <div className="card total">
-            <h3>
-              <span>Total</span>
-              <img src={total} alt="Total" />
-            </h3>
-            <p>$ 3000.00</p>
-          </div>
+          <Card id="total" title="Total" icon={total} value={3000} />
         </section>
 
         <section id="transaction">
