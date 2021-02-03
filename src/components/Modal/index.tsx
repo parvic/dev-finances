@@ -2,21 +2,17 @@ import React from 'react';
 import * as S from './style';
 
 const Modal = () => {
-  const open = () => {
-    document.querySelector('.modal-overlay')?.classList.add('active');
-  };
-
   const close = () => {
     document.querySelector('.modal-overlay')?.classList.remove('active');
   };
 
   return (
-    <S.ModalOverlay>
+    <S.ModalOverlay className="modal-overlay">
       <S.Modal>
         <div id="form">
           <h2>New Transactions</h2>
           <form action="">
-            <div className="input-group">
+            <S.InputGroup>
               <label className="sr-only" htmlFor="description">
                 <input type="text" />
               </label>
@@ -26,7 +22,7 @@ const Modal = () => {
                 name="description"
                 placeholder="Description"
               />
-            </div>
+            </S.InputGroup>
 
             <S.InputGroup>
               <label className="sr-only" htmlFor="amount">
@@ -52,14 +48,12 @@ const Modal = () => {
               <input type="date" id="date" name="date" />
             </S.InputGroup>
 
-            <S.InputGroup className="active">
-              <button className="button cancel" type="button" onClick={close}>
+            <S.ButtonGroup className="actions">
+              <S.CancelButton type="button" onClick={close}>
                 Cancel
-              </button>
-              <button className="button save" type="submit">
-                Save
-              </button>
-            </S.InputGroup>
+              </S.CancelButton>
+              <S.SaveButton type="submit">Save</S.SaveButton>
+            </S.ButtonGroup>
           </form>
         </div>
       </S.Modal>

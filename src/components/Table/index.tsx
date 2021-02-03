@@ -17,7 +17,7 @@ const Table = () => {
     <S.Transaction>
       <h2 className="sr-only">Transactions</h2>
 
-      <button className="button new" type="button" onClick={open}>
+      <button type="button" onClick={open}>
         + New Transaction
       </button>
 

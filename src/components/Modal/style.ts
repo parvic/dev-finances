@@ -19,25 +19,11 @@ export const ModalOverlay = styled.div`
     opacity: 1;
     visibility: visible;
   }
-`;
 
-export const InputGroup = styled.div`
-  .input-group {
-    margin-top: 0.8rem;
-  }
+  /* FORM ====================== */
 
-  .input-group small {
-    opacity: 0.4;
-  }
-
-  .input-group.actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .input-group.actions button {
-    width: 48%;
+  #form h2 {
+    margin-top: 0;
   }
 `;
 
@@ -49,4 +35,62 @@ export const Modal = styled.div`
   max-width: 500px;
   background-color: #f0f2f5;
   padding: 2.4rem;
+`;
+
+export const InputGroup = styled.div`
+  margin-top: 0.8rem;
+
+  input {
+    width: 100%;
+    border: none;
+    border-radius: 0.2rem;
+
+    padding: 0.8rem;
+  }
+
+  small {
+    opacity: 0.4;
+  }
+`;
+
+export const ButtonGroup = styled.div`
+  margin-top: 0.8rem;
+
+  &.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      width: 48%;
+    }
+  }
+`;
+
+export const CancelButton = styled.button`
+  width: 100%;
+  height: 50px;
+
+  color: #e92929;
+  border: 2px #e92929 solid;
+  outline: none;
+
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 1;
+  }
+`;
+
+export const SaveButton = styled.button`
+  width: 100%;
+  height: 50px;
+
+  color: white;
+  background-color: #49aa26;
+  border: none;
+
+  &:hover {
+    background-color: #3dd705;
+  }
 `;

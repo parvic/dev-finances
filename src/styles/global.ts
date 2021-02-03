@@ -8,6 +8,10 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    font-size: 93.75%;
+  }
+
   body {
     background-color: #f0f2f5;
     font-family: 'poppins', sans-serif;
@@ -22,19 +26,9 @@ export default createGlobalStyle`
   }
 
   button {
-    border: none;
     border-radius: 0.25rem;
     outline: none;
-
-    color: #49aa26;
     text-decoration: none;
-    /* font-size: 16px; */
-
     cursor: pointer;
   }
-
-  button:hover {
-    color: #3dd705;
-  }
-
 `;

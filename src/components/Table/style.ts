@@ -8,6 +8,17 @@ export const Transaction = styled.section`
   button {
     display: inline-block;
     margin-bottom: 0.8rem;
+    border: none;
+    outline: none;
+
+    color: #49aa26;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    &:hover {
+      color: #3dd705;
+    }
   }
 `;
 
